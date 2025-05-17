@@ -23,7 +23,7 @@ pipeline {
 
 	stage('Build .NET Project') {
     steps {
-        dir('Project_BanSach-20250515T063933Z-1-001/Project_BanSach') {
+        dir('Project_BanSach-20250515T063933Z-1-001/Project_BanSach/Project_BanSach') {
             sh 'dotnet publish Project_BanSach.csproj -c Release -o ./publish'
         }
     }
