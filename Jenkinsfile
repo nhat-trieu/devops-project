@@ -23,7 +23,7 @@ pipeline {
 
 stage('Build .NET Project') {
     steps {
-        dir('Project_BanSach-20250515T063933Z-1-001') {
+        dir('Project_BanSach-20250515T063933Z-1-001/Project_BanSach') {
             sh 'dotnet build Project_BanSach.sln'
         }
     }
