@@ -3,12 +3,13 @@ pipeline {
 
     environment {
         SONARQUBE = 'SonarQubeServer'
+        PATH = "/opt/sonar-scanner/bin:$PATH"
     }
 
     stages {
         stage('Clone') {
             steps {
-                 git branch: 'main', url: 'https://github.com/nhat-trieu/devops-project.git'
+                git branch: 'main', url: 'git@github.com:nhat-trieu/devops-project.git'
             }
         }
 
@@ -37,3 +38,4 @@ pipeline {
         }
     }
 }
+
