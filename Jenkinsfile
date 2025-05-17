@@ -21,6 +21,14 @@ pipeline {
             }
         }
 
+stage('Build .NET Project') {
+    steps {
+        dir('Project_BanSach-20250515T063933Z-1-001') {
+            sh 'dotnet build Project_BanSach.sln'
+        }
+    }
+}
+
         stage('Build Docker') {
             steps {
                 sh 'docker build -t myapp .'
